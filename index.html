@@ -8,43 +8,30 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="budget-app">
+            <h1 id="Welcome">Good {time}!</h1> 
+            <!-- How to add welcome based on good morning or evening? And name? Login? -->
+            <!-- Option 1: Make side by side lists for income and assets, with budget overview on top -->
+            <!-- Option 2: Allow for basic entries of income and expenses -->
+            <select id="render-choice">
+                <option value="option1">Side-by-Side</option>
+                <option value="option2">All-in-One</option>
+            </select>
 
-            <div class="budget-app">
-
-                <h1>Welcome! Let's get started.</h1> 
-                <!-- How to add welcome based on good morning or evening? And name? -->
-                <!-- Option 1: Make side by side lists for income and assets, with budget overview on top -->
-                <!-- Option 2: Allow for basic entries of income and expenses -->
-
-                <div class="income-input">
-
-
-
-                </div>
-
-                <div class="input-list">
-
-
+                <div class="handle-input">
+                    <input type="text" id="entry-input" placeholder="Please input in format: type amount category!">
+                    <button id="add-entry-button">Add Entry</button>
+                    <button id="clear-entries-button">Clear Entries</button>
 
                 </div>
 
-                <div class="expense-input">
+                <ul id="income-list">
+                    <!-- Income entries will appear here -->
+                </ul>
 
-
-
-                </div>
-
-                <div class="expense-list">
-
-
-                </div>
-
-                <div class="budget-overview">
-
-
-
-                </div>
+                <ul id="expense-list">
+                    <!-- Expense entries will appear here -->
+                </ul>
 
             </div>
 
