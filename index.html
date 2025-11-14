@@ -9,20 +9,25 @@
 
     <body>
         <div class="budget-app">
-            <h1 id="Welcome">Good {time}!</h1> 
+            <h1 id="welcome">Hello!</h1> 
+            <p id="not-implemented">Please note, as of today, option two has not been implemented yet.</p>
             <!-- How to add welcome based on good morning or evening? And name? Login? -->
             <!-- Option 1: Make side by side lists for income and assets, with budget overview on top -->
             <!-- Option 2: Allow for basic entries of income and expenses -->
-            <select id="render-choice" placeholder="Render Options"> 
-                <!-- How to make 'placeholder' equivalent for dropdown menus??? -->
+            <select id="render-choice">
+                <option value="" disabled select>Select a List View</option> 
                 <option value="option1">Side-by-Side</option>
                 <option value="option2">All-in-One</option>
             </select>
+                <div class="balance-show">
+                    <h2>Your total balance today is: $0.</h2>
+
+                </div>
 
                 <div class="handle-input">
                     <input type="text" id="entry-input" placeholder="Please input in format: type amount category!">
-                    <button id="add-entry-button">Add Entry</button>
-                    <button id="clear-entries-button">Clear Entries</button>
+                    <button id="add-entry-button" onclick="addEntry()">Add Entry</button>
+                    <button id="clear-entries-button" onclick="clearEntries()">Clear Entries</button>
 
                 </div>
 

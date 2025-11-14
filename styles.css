@@ -5,15 +5,95 @@
     font-family: 'Arial', sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, #e6ffe6 0%, #e6f0ff 100%);
+    color: #222;
+    -webkit-font-smoothing:antialiased;
+}
+
 .budget-app{
-    background: linear-gradient(180deg, lightgreen, lightblue);
-    min-height: 100vh; 
-    width: 100%;
-    padding: 10px;
+    max-width: 900px;
+    margin: 28px auto;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 20px 24px;
+}
+
+h1#Welcome{
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.balance-show h2{
+    font-size: 1.1rem;
+    color: #0b5;
+    margin-bottom: 14px;
 }
 
 .handle-input{
-    text-align: center;
-    padding: 20px;
-    width: 100%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0 18px 0;
+}
+
+#entry-input{
+    flex: 1 1 420px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #cfd8e3;
+    font-size: 0.95rem;
+}
+
+button{
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    background: #2b8fef;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button#clear-entries-button{
+    background: #f04e4e;
+}
+
+select#render-choice{
+    display:block;
+    margin: 8px auto 12px auto;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #d0d7e3;
+}
+
+.lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+ul#income-list, ul#expense-list{
+    list-style: none;
+    background: #fbfdff;
+    min-height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #eef3f8;
+}
+
+ul#income-list li{ color: #0a7; }
+ul#expense-list li{ color: #e33; }
+
+@media (max-width: 640px){
+    .lists{ grid-template-columns: 1fr; }
+    .handle-input{ flex-direction: column; gap: 12px; }
+    button{ width: 100%; }
 }
